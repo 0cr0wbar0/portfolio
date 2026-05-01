@@ -1,0 +1,64 @@
+:root {
+  box-sizing: border-box;
+  background-color: darkolivegreen;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("InterVariable.ttf");
+}
+
+body {
+  margin: 0;
+}
+
+.project-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.project-link {
+  border: 0.25rem solid lightgreen;
+  background-color: darkgreen;
+  color: #bcffad;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-box {
+  font-family: "Inter";
+  text-align: center;
+}
+
+.title {
+  color: #bcffad;
+}
+
+.nb-button {
+  box-shadow: 0.4em 0.4em #001804;
+  transition: 0.2s ease-in-out;
+}
+
+.nb-button:hover {
+  transform: translate(0.4em, 0.4em);
+  box-shadow: 0 0 #001804;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #001804;
+}
