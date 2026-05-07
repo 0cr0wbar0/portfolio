@@ -1,8 +1,50 @@
 :root {
   box-sizing: border-box;
+  background-color: darkolivegreen;
+  font-family: "Inter";
 }
 
 @font-face {
-  font-family: Inter;
+  font-family: "Inter";
   src: url("InterVariable.ttf");
+}
+
+.preview-img {
+  width: 20rem;
+  height: auto;
+}
+
+.box-nav {
+  display: flex;
+  justify-self: flex-start;
+}
+
+.neobrutal-info-box {
+  margin: 2rem;
+  padding: 1.5rem;
+  border: 0.25rem solid lightgreen;
+  background-color: darkgreen;
+  box-shadow: 0.4em 0.4em #001804;
+}
+
+.neobrutal-info-box > :is(h1, h3) {
+  color: lightgreen;
+}
+
+.nb-button {
+  box-shadow: 0.4em 0.4em #001804;
+  transition: 0.2s ease-in-out;
+}
+
+.nb-button:hover {
+  transform: translate(0.4em, 0.4em);
+  box-shadow: 0 0 #001804;
+}
+
+.back-button {
+  border: 0.25rem solid lightgreen;
+  background-color: lightgreen;
+  text-decoration: none;
+  color: darkgreen;
+  padding: 0.5rem;
 }

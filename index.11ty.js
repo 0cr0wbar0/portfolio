@@ -11,20 +11,28 @@ export default class MainPage {
 
   render({ title, collections }) {
     let projects = collections.projects
-      .map(
-        (project) =>
-          `
-          <a class="project-link nb-button" href="${project.url}">
+      .map((project) => {
+        const tags = project.data.project_tags.split(" ");
+        const tagList = tags
+          .map((tag) => `<li class="tag ${tag.toLowerCase()}-tag">${tag}</li>`)
+          .join("\n");
+
+        return `
+          <a class="project-link nb-button" href=".${project.url}">
+            <img class="preview-img" src=${project.data.previewimg}>
             <h2>${project.data.title}</h2>
             <h4>
               ${project.data.desc}
             </h4>
             <p>
-              ${project.data.created}
+              ${this.readableDate(project.data.date)}
             </p>
+            <ul class="tag-list">
+              ${tagList}
+            </ul>
           </a>
-        `
-      )
+        `;
+      })
       .join("\n");
 
     return `<nav class="navbar"><h1 class="title">${title}</h1></nav>

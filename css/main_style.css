@@ -1,6 +1,7 @@
 :root {
   box-sizing: border-box;
   background-color: darkolivegreen;
+  font-family: "Inter";
 }
 
 @font-face {
@@ -26,15 +27,18 @@ body {
   color: #bcffad;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  margin: 0 1rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.project-link > * {
+  margin: 0.25rem;
+}
+
 .body-box {
-  font-family: "Inter";
   text-align: center;
 }
 
@@ -61,4 +65,55 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   background-color: #001804;
+}
+
+.preview-img {
+  width: 15rem;
+  height: auto;
+}
+
+.tag-list {
+  padding-left: 0;
+  max-width: 20rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tag {
+  padding: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.typescript-tag {
+  background-color: royalblue;
+  color: white;
+}
+
+.react-tag {
+  background-color: skyblue;
+  color: black;
+}
+
+.javascript-tag {
+  background-color: yellow;
+  color: black;
+}
+
+.express-tag {
+  background-color: black;
+  color: white;
+}
+
+.node-tag {
+  background-color: yellowgreen;
+  color: black;
+}
+
+.rust-tag {
+  background-color: coral;
+  color: black;
 }
