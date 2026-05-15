@@ -88,6 +88,11 @@ body {
   border-radius: 0.25rem;
 }
 
+.php-tag {
+  background-color: slateblue;
+  color: white;
+}
+
 .typescript-tag {
   background-color: royalblue;
   color: white;
@@ -115,5 +120,15 @@ body {
 
 .rust-tag {
   background-color: coral;
+  color: black;
+}
+
+.python-tag {
+  background-color: steelblue;
+  color: white;
+}
+
+.fastapi-tag {
+  background-color: lightseagreen;
   color: black;
 }

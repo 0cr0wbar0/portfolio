@@ -24,9 +24,9 @@ export default class MainPage {
             <h4>
               ${project.data.desc}
             </h4>
-            <p>
+            <time>
               ${this.readableDate(project.data.date)}
-            </p>
+            </time>
             <ul class="tag-list">
               ${tagList}
             </ul>

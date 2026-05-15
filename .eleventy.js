@@ -1,5 +1,6 @@
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
+import markdownItDiv from "markdown-it-div";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
@@ -14,6 +15,8 @@ export default function (eleventyConfig) {
     });
   });
 
-  const md = markdownIt().use(markdownItAttrs);
+  const md = markdownIt();
+  md.use(markdownItAttrs);
+  md.use(markdownItDiv);
   eleventyConfig.setLibrary("md", md);
 }

@@ -12,6 +12,8 @@
 .preview-img {
   width: 20rem;
   height: auto;
+  margin: 1rem;
+  box-shadow: 0.4em 0.4em #003a0a;
 }
 
 .box-nav {
@@ -27,8 +29,25 @@
   box-shadow: 0.4em 0.4em #001804;
 }
 
-.neobrutal-info-box > :is(h1, h3) {
+.neobrutal-info-box > :is(h1, h2, h3) {
   color: lightgreen;
+}
+
+.neobrutal-info-box > :is(h4, h5, h6) {
+  color: white;
+}
+
+.link-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.img-box > p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .nb-button {
@@ -41,7 +60,7 @@
   box-shadow: 0 0 #001804;
 }
 
-.back-button {
+.proj-button {
   border: 0.25rem solid lightgreen;
   background-color: lightgreen;
   text-decoration: none;
