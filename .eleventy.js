@@ -6,6 +6,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("images");
 
+  // Manual numeric date reformatting
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return dateObj.toLocaleDateString("en-GB", {
       year: "numeric",
@@ -13,6 +14,13 @@ export default function (eleventyConfig) {
       day: "numeric",
       timeZone: "UTC"
     });
+  });
+
+  // Sorting collection of projects by date
+  eleventyConfig.addCollection("projects", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("projects/*.md")
+      .sort((a, b) => b.date - a.date);
   });
 
   const md = markdownIt();
